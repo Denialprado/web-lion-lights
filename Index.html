@@ -15,7 +15,7 @@
         <div class="contacto-header">
             <p><i class="fas fa-envelope"></i> Denial.prado@hotmail.com</p>
             <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/danielpradof" target="_blank" style="color: #fff; text-decoration: none;">linkedin.com/in/danielpradof</a></p>
-            <p><i class="fas fa-map-marker-alt"></i> Combarbala #0738, La Granja</p>
+            <p><i class="fas fa-map-marker-alt"></i> Combarbala #7833, La Granja</p>
         </div>
     </header>
 
@@ -52,7 +52,6 @@
                 <p>Instalación y mantención preventiva/correctiva de sistemas contra incendio y seguridad electrónica.</p>
             </div>
 
-            <!-- Resto de la experiencia resumida para no alargar el código, puedes volver a pegar las otras experiencias aquí si lo deseas -->
              <div class="trabajo">
                 <h3>Trabajos Previos (2011 - 2019)</h3>
                 <p><strong>Técnico Instalador</strong> en System Chile, Seguridad y control Centurion, Sotesa Spa, Bc Comunicaciones y Wolfnet Ingenieria.</p>
@@ -60,32 +59,105 @@
             </div>
         </section>
 
-        <!-- NUEVA SECCIÓN: PORTAFOLIO VISUAL -->
+        <!-- SECCIÓN PORTAFOLIO CON TARJETAS CLICKEABLES -->
         <section class="seccion-portafolio">
             <h2>Portafolio de Proyectos</h2>
-            <p>Una muestra de mis trabajos técnicos y proyectos independientes.</p>
+            <p>Haz clic en cada tarjeta para ver más detalles técnicos y galerías de imágenes.</p>
             
             <div class="galeria">
                 <!-- Tarjeta 1: Redes -->
-                <div class="tarjeta-proyecto">
-                    <img src="img/Antena.png" alt="Proyecto">
+                <div class="tarjeta-proyecto" onclick="abrirModal('modal-redes')">
+                    <img src="img/redes-preview.jpg" alt="Proyecto de Redes" onerror="this.src='https://via.placeholder.com/400x250/1e293b/ffffff?text=Cableado+y+Racks'">
                     <div class="info-proyecto">
                         <h3>Infraestructura y Redes</h3>
-                        <p>Ordenamiento de racks, cableado estructurado y canalizaciones para asegurar la continuidad operativa.</p>
+                        <p>Diseño de topologías, ordenamiento de racks y configuración de enrutamiento.</p>
+                        <span class="ver-mas">Ver detalles <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
 
                 <!-- Tarjeta 2: 3D -->
-                <div class="tarjeta-proyecto">
-                    <img src="img/Impresora.png" alt="Proyecto 3D">
+                <div class="tarjeta-proyecto" onclick="abrirModal('modal-3d')">
+                    <img src="img/3d-preview.jpg" alt="Proyecto 3D" onerror="this.src='https://via.placeholder.com/400x250/1e293b/ffffff?text=Impresion+3D+PLA'">
                     <div class="info-proyecto">
                         <h3>Manufactura 3D</h3>
-                        <p>Calibración, laminado y producción de figuras temáticas y piezas utilitarias en material PLA.</p>
+                        <p>Modelado, calibración y producción de figuras temáticas y piezas utilitarias en material PLA.</p>
+                        <span class="ver-mas">Ver detalles <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3: Iluminación -->
+                <div class="tarjeta-proyecto" onclick="abrirModal('modal-iluminacion')">
+                    <img src="img/lion-preview.jpg" alt="Proyecto Iluminación" onerror="this.src='https://via.placeholder.com/400x250/1e293b/ffffff?text=Lion+Lights'">
+                    <div class="info-proyecto">
+                        <h3>Lion Lights EIRL</h3>
+                        <p>Soluciones de iluminación personalizada enfocadas en la estética y eficiencia técnica.</p>
+                        <span class="ver-mas">Ver detalles <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- FIN NUEVA SECCIÓN -->
+
+        <!-- VENTANAS EMERGENTES (MODALES) -->
+        <!-- Modal 1: Redes -->
+        <div id="modal-redes" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar" onclick="cerrarModal('modal-redes')">&times;</span>
+                <h2>Proyectos de Infraestructura y Redes</h2>
+                <div class="modal-galeria">
+                    <img src="img/redes-1.jpg" onerror="this.src='https://via.placeholder.com/300x200/ddd/555?text=Foto+Rack'">
+                    <img src="img/redes-2.jpg" onerror="this.src='https://via.placeholder.com/300x200/ddd/555?text=Foto+Cableado'">
+                </div>
+                <div class="modal-texto">
+                    <p>Implementación y saneamiento de infraestructura de red corporativa. Los trabajos incluyen la administración de equipos de borde, configuración de enlaces de respaldo (failover) para garantizar la continuidad operativa y certificación de puntos de red.</p>
+                    <ul>
+                        <li>Despliegue de cableado estructurado y fibra óptica.</li>
+                        <li>Configuración y montaje en racks de comunicaciones.</li>
+                        <li>Auditoría y optimización de topologías lógicas.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 2: Impresión 3D -->
+        <div id="modal-3d" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar" onclick="cerrarModal('modal-3d')">&times;</span>
+                <h2>Manufactura y Diseño 3D</h2>
+                <div class="modal-galeria">
+                    <img src="img/3d-1.jpg" onerror="this.src='https://via.placeholder.com/300x200/ddd/555?text=Foto+Figura+1'">
+                    <img src="img/3d-2.jpg" onerror="this.src='https://via.placeholder.com/300x200/ddd/555?text=Foto+Figura+2'">
+                </div>
+                <div class="modal-texto">
+                    <p>Producción de modelos tridimensionales utilizando tecnología FDM con una impresora Creality Ender-3 V3 SE. El proceso abarca desde la manipulación de software de laminado (slicing) hasta el acabado físico.</p>
+                    <ul>
+                        <li>Calibración avanzada de parámetros técnicos (temperaturas, retracciones, velocidad).</li>
+                        <li>Fabricación de piezas utilitarias, soportes estructurales y figuras de la cultura pop (anime, películas).</li>
+                        <li>Uso de filamento PLA para resultados de alta resistencia y definición.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 3: Iluminación -->
+        <div id="modal-iluminacion" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar" onclick="cerrarModal('modal-iluminacion')">&times;</span>
+                <h2>Lion Lights EIRL</h2>
+                <div class="modal-galeria">
+                    <img src="img/lion-1.jpg" onerror="this.src='https://via.placeholder.com/300x200/ddd/555?text=Foto+Iluminacion+1'">
+                    <img src="img/lion-2.jpg" onerror="this.src='https://via.placeholder.com/300x200/ddd/555?text=Foto+Iluminacion+2'">
+                </div>
+                <div class="modal-texto">
+                    <p>Desarrollo integral de proyectos de iluminación comercial y residencial bajo la marca Lion Lights EIRL. Integración de componentes electrónicos con diseño estético para crear ambientes modernos y funcionales.</p>
+                    <ul>
+                        <li>Asesoría en distribución lumínica.</li>
+                        <li>Montaje de sistemas eléctricos eficientes.</li>
+                        <li>Implementación de soluciones tecnológicas personalizadas para cada espacio.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- FIN MODALES -->
 
         <section class="seccion-educacion">
             <h2>Educación</h2>
@@ -116,5 +188,22 @@
         <p>&copy; 2026 Daniel Prado. Todos los derechos reservados.</p>
     </footer>
 
+    <!-- SCRIPT PARA CONTROLAR LAS VENTANAS EMERGENTES -->
+    <script>
+        function abrirModal(idModal) {
+            document.getElementById(idModal).style.display = "flex";
+        }
+
+        function cerrarModal(idModal) {
+            document.getElementById(idModal).style.display = "none";
+        }
+
+        // Cierra la ventana si el usuario toca la parte oscura de atrás
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
