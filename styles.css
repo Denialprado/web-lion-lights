@@ -196,10 +196,10 @@ main {
 .sub-galeria img {
     flex: 1 1 calc(50% - 15px);
     width: 100%;
+    height: auto; /* Esto permite que la foto crezca hacia abajo lo necesario */
     border-radius: 6px;
-    object-fit: cover;
-    max-height: 250px;
     border: 1px solid #e2e8f0;
+    /* Eliminamos el object-fit y el max-height para evitar recortes */
 }
 
 /* --- BOTÓN DE WHATSAPP --- */
@@ -224,4 +224,34 @@ main {
 
 .whatsapp-btn:hover {
     transform: scale(1.1) rotate(-5deg);
+}
+/* --- BOTÓN DE CURRÍCULUM --- */
+.btn-cv {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    background-color: #3b82f6; /* Color azul profesional */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-cv:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    background-color: #2563eb; /* Azul más oscuro al pasar el mouse */
+}
+
+/* Ajuste automático para celulares */
+@media (max-width: 600px) {
+    .btn-cv {
+        position: static; /* Quita la posición fija de la esquina */
+        display: inline-block;
+        margin-bottom: 25px;
+    }
 }

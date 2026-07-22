@@ -9,7 +9,12 @@
 </head>
 <body>
 
-    <header>
+    <header style="position: relative;">
+        <!-- BOTÓN DE CURRÍCULUM ARRIBA A LA DERECHA -->
+        <a href="CurriculumDP.pdf" target="_blank" class="btn-cv">
+            <i class="fas fa-file-pdf"></i> Ver mi CV
+        </a>
+
         <h1>Daniel Prado</h1>
         <h2>Ingeniero en Conectividad y Redes</h2>
         <p>Especialista en Infraestructura TI, Manufactura 3D y Diseño de Iluminación.</p>
@@ -25,7 +30,7 @@
             <div class="galeria">
                 <!-- Tarjeta 1: Redes -->
                 <div class="tarjeta-proyecto" onclick="abrirModal('modal-redes')">
-                    <img src="img/Antena4.png" alt="Redes" onerror="this.src='https://via.placeholder.com/400x250/1e293b/ffffff?text=Infraestructura+y+Redes'">
+                    <img src="img/Antena4.png" alt="Redes">
                     <div class="info-proyecto">
                         <h3>Infraestructura y Redes</h3>
                         <p>Gestión de TI, topologías, racks y conectividad.</p>
@@ -35,7 +40,7 @@
 
                 <!-- Tarjeta 2: 3D -->
                 <div class="tarjeta-proyecto" onclick="abrirModal('modal-3d')">
-                    <img src="img/Impresora.png" alt="Impresión 3D" onerror="this.src='https://via.placeholder.com/400x250/1e293b/ffffff?text=Manufactura+3D'">
+                    <img src="img/Impresora.png" alt="Impresión 3D">
                     <div class="info-proyecto">
                         <h3>Manufactura 3D</h3>
                         <p>Diseño, calibración y producción de figuras en PLA.</p>
@@ -45,7 +50,7 @@
 
                 <!-- Tarjeta 3: Iluminación -->
                 <div class="tarjeta-proyecto" onclick="abrirModal('modal-iluminacion')">
-                    <img src="img/lion-preview.jpg" alt="Iluminación" onerror="this.src='https://via.placeholder.com/400x250/1e293b/ffffff?text=Lion+Lights+EIRL'">
+                    <img src="img/Luminaria.png" alt="Iluminación">
                     <div class="info-proyecto">
                         <h3>Denial Tec</h3>
                         <p>Soluciones de iluminación estética y eficiente.</p>
@@ -63,23 +68,35 @@
                 <span class="cerrar" onclick="cerrarModal('modal-redes')">&times;</span>
                 <h2 class="titulo-modal">Proyectos de Redes</h2>
                 
-                <!-- Proyecto A dentro de Redes -->
+                <!-- Proyecto 1 dentro de Redes -->
                 <div class="sub-proyecto">
                     <h3>Proyecto 1: Ordenamiento de Rack Principal</h3>
-                    <div class="sub-galeria">
-                        <img src="img/redes-1a.jpg" onerror="this.src='https://via.placeholder.com/250x150/ddd/555?text=Antes'">
-                        <img src="img/redes-1b.jpg" onerror="this.src='https://via.placeholder.com/250x150/ddd/555?text=Despues'">
+                    
+                    <div class="descripcion-proyecto">
+                        <p><strong>Descripción:</strong> Saneamiento completo del cableado estructurado, peinado de cables de red y reorganización de switches. Este proyecto se enfocó en mejorar la ventilación de los equipos activos y facilitar el diagnóstico rápido de fallas en la capa física.</p>
                     </div>
-                    <p>Saneamiento completo del cableado estructurado, peinado de cables de red y reorganización de switches para mejorar la ventilación y el diagnóstico de fallas.</p>
+
+                    <div class="sub-galeria">
+                        <!-- Agrega más etiquetas img aquí para este proyecto -->
+                        <img src="img/redes-1a.jpg" alt="Rack Antes">
+                        <img src="img/redes-1b.jpg" alt="Rack Después">
+                    </div>
                 </div>
 
-                <!-- Proyecto B dentro de Redes -->
+                <!-- Proyecto 2 dentro de Redes -->
                 <div class="sub-proyecto">
-                    <h3>Proyecto 2: Implementación de Enlace Failover</h3>
-                    <div class="sub-galeria">
-                        <img src="img/Antena3.png" onerror="this.src='https://via.placeholder.com/250x150/ddd/555?text=Configuracion'">
+                    <h3>Proyecto 2: Enlace de Respaldo y Failover en Centro de Salud</h3>
+                    
+                    <div class="descripcion-proyecto">
+                        <p><strong>Descripción:</strong> Despliegue de un enlace inalámbrico punto a punto de respaldo entre un edificio municipal y el centro de salud local utilizando antenas Ubiquiti PowerBeam 5AC Gen2. Adicionalmente, se configuró un balanceador de carga TP-LINK TL-R470T+ para gestionar un sistema de enrutamiento failover, asegurando alta disponibilidad y continuidad operativa ante caídas del servicio principal.</p>
                     </div>
-                    <p>Configuración de equipos de borde y enrutamiento para asegurar alta disponibilidad en los servicios críticos mediante enlaces redundantes.</p>
+
+                    <div class="sub-galeria">
+                        <!-- Agrega más etiquetas img aquí para este proyecto -->
+                        <img src="img/Antena3.png" alt="Instalación de Antena Ubiquiti a">
+                        <img src="img/Antena.png" alt="Instalación de Antena Ubiquiti b">
+                        <img src="img/Antena2.png" alt="Fijacion de Antena Ubiquiti">
+                    </div>
                 </div>
             </div>
         </div>
@@ -93,20 +110,24 @@
                 <!-- Proyecto A dentro de 3D -->
                 <div class="sub-proyecto">
                     <h3>Proyecto 1: Figuras Temáticas (Anime y Cultura Pop)</h3>
-                    <div class="sub-galeria">
-                        <img src="img/3d-1a.jpg" onerror="this.src='https://via.placeholder.com/250x150/ddd/555?text=Figura+1'">
-                        <img src="img/3d-1b.jpg" onerror="this.src='https://via.placeholder.com/250x150/ddd/555?text=Figura+2'">
+                    <div class="descripcion-proyecto">
+                        <p><strong>Descripción:</strong> Laminado de alta precisión y producción de modelos detallados basados en franquicias como Dragon Ball, One Piece y Saint Seiya utilizando PLA de alta calidad.</p>
                     </div>
-                    <p>Laminado de alta precisión y producción de modelos detallados basados en franquicias como Dragon Ball, One Piece y Saint Seiya utilizando PLA de alta calidad.</p>
+                    <div class="sub-galeria">
+                        <img src="img/3d-1a.jpg" alt="Figura 3D 1">
+                        <img src="img/3d-1b.jpg" alt="Figura 3D 2">
+                    </div>
                 </div>
 
                 <!-- Proyecto B dentro de 3D -->
                 <div class="sub-proyecto">
                     <h3>Proyecto 2: Piezas Utilitarias y Maceteros</h3>
-                    <div class="sub-galeria">
-                        <img src="img/3d-2a.jpg" onerror="this.src='https://via.placeholder.com/250x150/ddd/555?text=Macetero'">
+                    <div class="descripcion-proyecto">
+                        <p><strong>Descripción:</strong> Diseño y fabricación de maceteros autorregantes e insertos organizativos para uso doméstico y mudanzas.</p>
                     </div>
-                    <p>Diseño y fabricación de maceteros autorregantes e insertos organizativos para uso doméstico y mudanzas.</p>
+                    <div class="sub-galeria">
+                        <img src="img/3d-2a.jpg" alt="Macetero impreso">
+                    </div>
                 </div>
             </div>
         </div>
@@ -119,12 +140,14 @@
                 
                 <!-- Proyecto A dentro de Iluminación -->
                 <div class="sub-proyecto">
-                    <h3>Proyecto 1: Iluminación Residencial </h3>
-                    <div class="sub-galeria">
-                        <img src="img/Galpon1.jpg" onerror="this.src='https://via.placeholder.com/250x150/ddd/555?text=Instalacion+1'">
-                        <img src="img/Galpon2.jpg" onerror="this.src='https://via.placeholder.com/250x150/ddd/555?text=Instalacion+2'">
+                    <h3>Proyecto 1: Iluminación Residencial</h3>
+                    <div class="descripcion-proyecto">
+                        <p><strong>Descripción:</strong> Instalación de luminarias, Puntos Eléctricos y Tableros Domiciliarios.</p>
                     </div>
-                    <p>Instalación de luminarias, Puntos Electricos y Tableros Domiciliarios.</p>
+                    <div class="sub-galeria">
+                        <img src="img/Galpon1.jpg" alt="Galpón 1">
+                        <img src="img/Galpon2.jpg" alt="Galpón 2">
+                    </div>
                 </div>
             </div>
         </div>
@@ -140,7 +163,7 @@
     <script>
         function abrirModal(id) {
             document.getElementById(id).style.display = "flex";
-            document.body.style.overflow = "hidden"; // Evita que el fondo se mueva al hacer scroll en la ventana
+            document.body.style.overflow = "hidden";
         }
 
         function cerrarModal(id) {
