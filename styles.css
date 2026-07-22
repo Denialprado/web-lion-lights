@@ -225,26 +225,29 @@ main {
 .whatsapp-btn:hover {
     transform: scale(1.1) rotate(-5deg);
 }
-/* --- BOTÓN DE CURRÍCULUM --- */
+/* --- BOTÓN DE CURRÍCULUM FLOTANTE --- */
 .btn-cv {
-    position: absolute;
+    position: fixed;
     top: 25px;
-    right: 30px;
-    background-color: #3b82f6; /* Color azul profesional */
+    right: 25px;
+    background-color: #3b82f6; /* Color azul */
     color: #fff;
-    padding: 10px 20px;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    z-index: 1000;
+    transition: transform 0.3s ease;
     text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 0.95em;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .btn-cv:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-    background-color: #2563eb; /* Azul más oscuro al pasar el mouse */
+    transform: scale(1.1) rotate(5deg);
+    background-color: #2563eb;
 }
 
 /* Ajuste automático para celulares */
